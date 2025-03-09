@@ -119,6 +119,27 @@ footer {
     background-color: #f8f9fa;
 }
 
+/* Intro section styles */
+.intro-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro-photo {
+    text-align: center;
+}
+
+.profile-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     section {
@@ -131,5 +152,19 @@ footer {
 
     .header-title {
         font-size: 1.2rem;
+    }
+
+    .intro-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .intro-photo {
+        order: -1; /* This moves the photo to the top on mobile */
+    }
+
+    .profile-photo {
+        max-width: 250px; /* Limit photo size on mobile */
+        margin: 0 auto 2rem;
     }
 } 
