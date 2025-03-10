@@ -18,7 +18,7 @@ body {
     font-weight: 200; /* ExtraLight weight */
     line-height: 1.6;
     color: #333;
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="black"/><text x="12" y="16" text-anchor="middle" fill="white" font-size="12">8</text></svg>') 12 12, auto;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><text x='0' y='20' font-size='20'>🐭</text></svg>"), auto;
 }
 
 /* Header styles */
@@ -260,11 +260,26 @@ footer {
     color: #2c3e50;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.2s ease;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    transition: all 0.2s ease;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%232c3e50' viewBox='0 0 16 16'%3E%3Cpath d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
+    background-position: right 4px center;
+    background-repeat: no-repeat;
+    padding-right: 20px;
 }
 
 .report-link:hover {
-    color: #3498db;
+    background-color: #e0e0e0;
+    color: #1a252f;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.report-link:active {
+    transform: translateY(0);
+    box-shadow: none;
 }
 
 #research {
@@ -273,4 +288,9 @@ footer {
 
 #research .experience-item {
     background-color: white;  /* To ensure contrast with the section background */
+}
+
+/* For clickable elements, you might want to change the cursor to indicate interactivity */
+a, button, .project-card, .tech-tag {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><text x='0' y='20' font-size='20'>🐁</text></svg>"), pointer;
 } 
