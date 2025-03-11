@@ -385,4 +385,57 @@ a, button, .project-card, .tech-tag {
     .consuming-image {
         height: 200px;
     }
+}
+
+#reach-out {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.reach-out-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.reach-out-container p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 1rem 0;
+}
+
+.social-link {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    transition: transform 0.2s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.cheese-emoji {
+    font-size: 2.5rem;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.social-link:hover .cheese-emoji {
+    transform: rotate(15deg);
+}
+
+.chat-text .line {
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .chat-text .line {
+        display: block;
+    }
 } 
