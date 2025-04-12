@@ -448,5 +448,5 @@ a, button, .project-card, .tech-tag {
 
 #finished {
     padding: 4rem 2rem;
-    background-color: #f8f9fa;
+    background-color: white;  /* Changed from #f8f9fa to white to create alternation */
 } 
