@@ -75,7 +75,7 @@ section {
 
 /* Intro section */
 #intro {
-    background-color: #f8f9fa;
+    background-color: white;
 }
 
 /* Experience section */
@@ -307,7 +307,7 @@ footer {
 }
 
 #research {
-    background-color: #f8f9fa;  /* Light background to distinguish from Experience section */
+    background-color: #f8f9fa;
 }
 
 #research .experience-item {
@@ -326,7 +326,6 @@ a, button, .project-card, .tech-tag {
 }
 
 #consuming {
-    padding: 4rem 2rem;
     background-color: #f8f9fa;
 }
 
@@ -388,8 +387,6 @@ a, button, .project-card, .tech-tag {
 }
 
 #reach-out {
-    padding: 4rem 2rem;
-    text-align: center;
     background-color: #f8f9fa;
 }
 
@@ -447,6 +444,5 @@ a, button, .project-card, .tech-tag {
 }
 
 #finished {
-    padding: 4rem 2rem;
-    background-color: white;  /* Changed from #f8f9fa to white to create alternation */
+    background-color: white;
 } 
