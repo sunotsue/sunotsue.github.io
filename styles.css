@@ -67,10 +67,46 @@ main {
 
 section {
     padding: 4rem 2rem;
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+}
+
+/* Standardize section header spacing */
+section h2 {
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+/* Standardize spacing between sections */
+#podcast-feature,
+#education,
+#experience,
+#research,
+#projects,
+#consuming,
+#finished,
+#reach-out {
+    margin-top: 2rem;
+}
+
+/* Adjust container spacing */
+.experience-container,
+.project-grid,
+.consuming-grid,
+.podcast-container,
+.reach-out-container {
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 1rem;
+    }
+
+    section h2 {
+        margin-bottom: 1.5rem;
+    }
 }
 
 /* Intro section */
@@ -307,7 +343,7 @@ footer {
 }
 
 #research {
-    background-color: #f8f9fa;
+    background-color: white;
 }
 
 #research .experience-item {
@@ -326,7 +362,7 @@ a, button, .project-card, .tech-tag {
 }
 
 #consuming {
-    background-color: #f8f9fa;
+    background-color: white;
 }
 
 .consuming-grid {
@@ -387,18 +423,39 @@ a, button, .project-card, .tech-tag {
 }
 
 #reach-out {
-    background-color: #f8f9fa;
+    padding: 4rem 2rem;
+    text-align: center;
 }
 
 .reach-out-container {
     max-width: 800px;
     margin: 0 auto;
+    text-align: center;
 }
 
-.reach-out-container p {
+.chat-text {
     font-size: 1.2rem;
     line-height: 1.6;
     margin: 1rem 0;
+    text-align: center;
+}
+
+.chat-text .line {
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .chat-text .line {
+        display: block;
+        text-align: center;
+    }
+    
+    .chat-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.2rem;
+    }
 }
 
 .social-link {
@@ -427,16 +484,6 @@ a, button, .project-card, .tech-tag {
     transform: rotate(15deg);
 }
 
-.chat-text .line {
-    display: inline;
-}
-
-@media (max-width: 768px) {
-    .chat-text .line {
-        display: block;
-    }
-}
-
 .recruiter-note {
     font-size: 1rem;
     color: #333;
@@ -444,5 +491,218 @@ a, button, .project-card, .tech-tag {
 }
 
 #finished {
+    padding-top: 6rem;  /* Increase from 4rem to match other sections */
+    background-color: #f8f9fa;
+}
+
+.podcast-section {
+    margin-top: 1.5rem;
+}
+
+.podcast-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease;
+}
+
+.podcast-link:hover {
+    transform: translateY(-2px);
+}
+
+.podcast-logo {
+    width: 220px;  /* Increased from 200px */
+    height: 220px;  /* Increased from 200px */
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Make the media query more specific and add !important to override any other styles */
+@media only screen and (max-width: 768px) {
+    .podcast-container .podcast-content .podcast-logo {
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    .podcast-links {
+        display: flex;
+        justify-content: center;
+        gap: 0.8rem;  /* Slightly reduce gap on mobile */
+        width: 100%;  /* Ensure full width */
+    }
+
+    .platform-button {
+        /* Keep buttons from wrapping by making them more compact if needed */
+        padding: 0.6rem 1rem;  /* Slightly reduced horizontal padding */
+    }
+}
+
+#podcast-feature {
+    background-color: #f8f9fa;
+    padding: 4rem 2rem;
+    min-height: auto;
+}
+
+.podcast-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.podcast-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 2.5rem;
+    background-color: transparent;
+    border: none;
+}
+
+.podcast-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;  /* Keep text left-aligned */
+}
+
+.podcast-text h2 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.podcast-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.podcast-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #1DB954;  /* Spotify green */
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.2s ease;
+}
+
+.podcast-button:hover {
+    background-color: #1ed760;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(29, 185, 84, 0.3);
+}
+
+@media (max-width: 768px) {
+    #podcast-feature {
+        padding: 3rem 1rem;
+    }
+
+    .podcast-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .podcast-logo {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.podcast-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;  /* Take full width of container */
+    justify-content: flex-start;  /* Align with the text */
+}
+
+.platform-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6rem 1.2rem;  /* Back to original padding */
+    text-decoration: none;
+    border-radius: 20px;  /* Back to original border-radius */
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.platform-button:hover {
+    transform: translateY(-2px);
+}
+
+.platform-button.spotify {
+    background-color: #1DB954;
+    color: white;
+}
+
+.platform-button.spotify:hover {
+    background-color: #1ed760;
+    box-shadow: 0 4px 10px rgba(29, 185, 84, 0.3);
+}
+
+.platform-button.apple {
+    background-color: #872EC4;  /* Updated to Apple Podcasts purple */
+    color: white;
+}
+
+.platform-button.apple:hover {
+    background-color: #9633d8;  /* Slightly lighter purple for hover */
+    box-shadow: 0 4px 10px rgba(135, 46, 196, 0.3);  /* Updated shadow color */
+}
+
+.platform-button.youtube {
+    background-color: #FF0000;
+    color: white;
+}
+
+.platform-button.youtube:hover {
+    background-color: #ff1a1a;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+}
+
+/* Back to original mobile sizes */
+@media (max-width: 768px) {
+    .platform-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+}
+
+#education {
     background-color: white;
+}
+
+#experience {
+    padding-top: 6rem;  /* Increase from 4rem to match other sections */
+    background-color: #f8f9fa;
+}
+
+#projects {
+    padding-top: 6rem;  /* Increase from 4rem to match other sections */
+    background-color: #f8f9fa;
+}
+
+@media only screen and (max-width: 768px) {
+    .podcast-text {
+        align-items: center;  /* Center everything on mobile */
+        text-align: center;
+    }
+
+    .podcast-container .podcast-content .podcast-logo {
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    .podcast-links {
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    .platform-button {
+        padding: 0.6rem 1rem;
+    }
 } 
