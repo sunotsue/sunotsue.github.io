@@ -60,6 +60,25 @@ header.scrolled {
     color: #333;
 }
 
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    opacity: 0.7;
+}
+
+.github-link:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+.github-link svg {
+    width: 20px;
+    height: 20px;
+}
+
 /* Main content */
 main {
     margin-top: 70px;
@@ -257,6 +276,11 @@ footer {
 
     .header-title {
         font-size: 1.2rem;
+    }
+
+    .github-link svg {
+        width: 18px;
+        height: 18px;
     }
 
     .intro-container {
@@ -782,6 +806,31 @@ a, button, .project-card, .tech-tag {
 #projects {
     padding-top: 6rem;  /* Increase from 4rem to match other sections */
     background-color: #f8f9fa;
+}
+
+.github-link-card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+    opacity: 0.7;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+}
+
+.github-link-card:hover {
+    opacity: 1;
+    transform: translateY(-2px);
+    background-color: #f0f0f0;
+}
+
+.github-link-card svg {
+    width: 24px;
+    height: 24px;
 }
 
 @media only screen and (max-width: 768px) {
