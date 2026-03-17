@@ -367,7 +367,7 @@ footer {
 }
 
 #research {
-    background-color: white;
+    background-color: #f8f9fa;
 }
 
 #research .experience-item {
@@ -386,7 +386,7 @@ a, button, .project-card, .tech-tag {
 }
 
 #consuming {
-    background-color: white;
+    background-color: #f8f9fa;
 }
 
 .consuming-grid {
@@ -614,7 +614,7 @@ a, button, .project-card, .tech-tag {
 
 #finished {
     padding-top: 6rem;  /* Increase from 4rem to match other sections */
-    background-color: #f8f9fa;
+    background-color: white;
 }
 
 .podcast-section {
@@ -662,7 +662,7 @@ a, button, .project-card, .tech-tag {
 }
 
 #podcast-feature {
-    background-color: #f8f9fa;
+    background-color: #f8f9fa; /* alternates correctly after projects (white) */
     padding: 4rem 2rem;
     min-height: auto;
 }
@@ -795,17 +795,17 @@ a, button, .project-card, .tech-tag {
 }
 
 #education {
-    background-color: white;
+    background-color: #f8f9fa;
 }
 
 #experience {
     padding-top: 6rem;  /* Increase from 4rem to match other sections */
-    background-color: #f8f9fa;
+    background-color: white;
 }
 
 #projects {
     padding-top: 6rem;  /* Increase from 4rem to match other sections */
-    background-color: #f8f9fa;
+    background-color: white;
 }
 
 .github-link-card {
