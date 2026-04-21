@@ -1,42 +1,22 @@
-/* First, import the font (add this at the very top of your CSS file) */
-@import url('https://fonts.cdnfonts.com/css/prestige-elite-std');
-
-/* Add this at the top of the file */
-@font-face {
-    font-family: 'Cascadia Code';
-    src: url('fonts/CascadiaCode-ExtraLight.woff2') format('woff2');
-    font-weight: 200;
-    font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
 /* Reset default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Prestige Elite Std', monospace;
+    font-family: 'Nanum Myeongjo', serif;
 }
 
 /* Then, set it as the default font for the entire site */
 body {
-    font-family: 'Cascadia Code', Consolas, Monaco, "Lucida Console", monospace;
-    font-weight: 200; /* ExtraLight weight */
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 400;
     line-height: 1.6;
     color: #333;
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><text x='0' y='20' font-size='20'>🐭</text></svg>"), auto;
 }
 
-/* If you want to ensure specific elements use it (for better browser compatibility) */
-body, 
-h1, h2, h3, h4, h5, h6,
-p, 
-.intro-description,
-.experience-title,
-.consuming-text,
-.tech-tag,
-.report-link {
-    font-family: 'Prestige Elite Std', monospace;
-}
 
 /* Header styles */
 header {
@@ -245,11 +225,12 @@ footer {
 /* Intro section styles */
 .intro-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
     align-items: center;
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
+    justify-content: center;
 }
 
 .intro-photo {
