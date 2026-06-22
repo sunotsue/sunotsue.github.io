@@ -13,443 +13,305 @@
 
 <body>
     <header id="navbar">
-        <h1 class="header-title">Su Park</h1>
+        <div class="header-inner">
+            <h1 class="header-title">Su Park</h1>
+            <nav class="tab-nav">
+                <button class="tab-btn active" data-tab="about">about</button>
+                <button class="tab-btn" data-tab="research">research</button>
+                <button class="tab-btn" data-tab="projects">projects</button>
+                <button class="tab-btn" data-tab="cv">cv</button>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="intro">
-            <div class="intro-container">
-                <div class="intro-description">
-                    <p>🖤 Hi! I'm an AI Researcher/Engineer originally from Korea, with formative years in NYC, now
-                        based
-                        in SF. I specialize in post-training and deploying agents for coding and various enterprise
-                        capabilities. This entails building domain-specific RL environments, with human + synthetic
-                        training recipes, and evaluation pipelines that scale custom model
-                        behaviors effectively.</p>
-                    <br><br>
-                    <p>I'm known for moving fast and being biased towards building over theorizing. I've always
-                        worked cross-functionally with C-Suite, Product, Growth, and Design.</p>
-                    <br><br>
-                    <p>I'm a US citizen interested in defense tech 🇺🇸🇰🇷</p>
-                </div>
-                <div class="intro-photo">
-                    <img src="images/profile_photo.jpeg" alt="Su Park" class="profile-photo">
-                </div>
-            </div>
-        </section>
 
-        <section id="consuming">
-            <h2>Currently Consuming</h2>
-            <div class="consuming-grid">
-                <a href="https://en.wikipedia.org/wiki/Snow_Crash" target="_blank" class="consuming-card">
-                    <img src="images/snowcrash.jpeg" alt="Snow Crash by Neal Stephenson" class="consuming-image">
-                    <div class="consuming-text">
-                        <h3>Snow Crash</h3>
-                        <p>Neal Stephenson</p>
-                    </div>
-                </a>
+        <!-- TAB 1: About -->
+        <div id="tab-about" class="tab-panel active">
 
-                <a href="https://www.chess.com" target="_blank" class="consuming-card">
-                    <img src="images/chess-queen.png" alt="Chess" class="consuming-image">
-                    <div class="consuming-text">
-                        <h3>Chess</h3>
-                        <p>chess.com</p>
-                    </div>
-                </a>
-            </div>
-        </section>
+            <section id="intro">
+                <div class="intro-container">
+                    <div class="intro-description">
+                        <p>🖤 Hi! I'm Su. Sumin (수민) for those who want my real name.</p>
+                        <p>I work on post-training, evaluation, and model behavior. I'm particularly interested in data
+                            attribution, data efficiency, and understanding why models succeed, fail,
+                            and generalize.</p>
+                        <p>At Turing, I lead Terminal Bench, working on reward design, synthetic data generation, and
+                            feedback signals for post-training. Previously, I pre/post-trained domain-specific
+                            language models across enterprise and media applications.</p>
+                        <p>Originally from Korea, with formative years in New York and now based in SF. </p>
+                        <p>U.S. Citizen interested in defense tech 🇺🇸🇰🇷</p>
 
-        <section id="finished">
-            <h2>Recently Finished</h2>
-            <div class="consuming-grid">
-                <a href="https://www.act-sf.org/whats-on/2025-26-season/paranormal-activity" target="_blank"
-                    class="consuming-card">
-                    <img src="images/paranormal.jpeg" alt="Paranormal Activity" class="consuming-image">
-                    <div class="consuming-text">
-                        <h3>Paranormal Activity</h3>
-                        <p>ACT San Francisco</p>
-                    </div>
-                </a>
-
-                <a href="https://en.wikipedia.org/wiki/Perfection_(novel)" target="_blank" class="consuming-card">
-                    <img src="images/perfection.jpeg" alt="Perfection by Vincenzo Latronico" class="consuming-image">
-                    <div class="consuming-text">
-                        <h3>Perfection</h3>
-                        <p>Vincenzo Latronico</p>
-                    </div>
-                </a>
-
-                <a href="https://www.punchdrunk.com/work/violas-room/" target="_blank" class="consuming-card">
-                    <img src="images/violas-room.jpeg" alt="Viola's Room" class="consuming-image">
-                    <div class="consuming-text">
-                        <h3>Viola's Room</h3>
-                        <p>The Shed</p>
-                    </div>
-                </a>
-
-                <a href="https://en.wikipedia.org/wiki/Pluribus_(TV_series)" target="_blank" class="consuming-card">
-                    <img src="images/pluribus.jpg" alt="Pluribus TV Series" class="consuming-image">
-                    <div class="consuming-text">
-                        <h3>Pluribus</h3>
-                        <p>Apple TV</p>
-                    </div>
-                </a>
-
-                <a href="https://en.wikipedia.org/wiki/The_Stranger_(Camus_novel)" target="_blank"
-                    class="consuming-card">
-                    <img src="images/stranger.jpg" alt="The Stranger by Albert Camus" class="consuming-image">
-                    <div class="consuming-text">
-                        <h3>The Stranger</h3>
-                        <p>Albert Camus</p>
-                    </div>
-                </a>
-
-                <a href="https://www.inventorypress.com/product/fantasy" target="_blank" class="consuming-card">
-                    <img src="images/fantasy.jpg"
-                        alt="Fantasy: Invention, Creativity, and Imagination in Visual Communications by Bruno Munari"
-                        class="consuming-image">
-                    <div class="consuming-text">
-                        <h3>Fantasy: Invention, Creativity, and Imagination in Visual Communications</h3>
-                        <p>Bruno Munari</p>
-                    </div>
-                </a>
-
-                <a href="https://en.wikipedia.org/wiki/Why_I_Am_Not_a_Christian" target="_blank" class="consuming-card">
-                    <img src="images/bert.jpg" alt="Why I Am Not a Christian by Bertrand Russell"
-                        class="consuming-image">
-                    <div class="consuming-text">
-                        <h3>Why I Am Not a Christian</h3>
-                        <p>Bertrand Russell</p>
-                    </div>
-                </a>
-
-                <a href="https://en.wikipedia.org/wiki/Girls_(TV_series)" target="_blank" class="consuming-card">
-                    <img src="images/girls.jpg" alt="Girls TV Series" class="consuming-image">
-                    <div class="consuming-text">
-                        <h3>Girls</h3>
-                        <p>HBO</p>
-                    </div>
-                </a>
-
-                <a href="https://www.weikewangwrites.com/" target="_blank" class="consuming-card">
-                    <img src="images/rental-house.jpeg" alt="Rental House by Weike Wang" class="consuming-image">
-                    <div class="consuming-text">
-                        <h3>Rental House</h3>
-                        <p>Weike Wang</p>
-                    </div>
-                </a>
-
-                <a href="https://www.alaindebotton.com/status/" target="_blank" class="consuming-card">
-                    <img src="images/status-anxiety.jpg" alt="Status Anxiety by Alain de Botton"
-                        class="consuming-image">
-                    <div class="consuming-text">
-                        <h3>Status Anxiety</h3>
-                        <p>Alain de Botton</p>
-                    </div>
-                </a>
-            </div>
-        </section>
-
-        <section id="education">
-            <h2>Education</h2>
-            <div class="experience-container">
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <img src="logos/cmu-scs-logo.png" alt="CMU School of Computer Science Logo"
-                            class="company-logo">
-                        <div class="experience-title">
-                            <h3>M.S. in Artificial Intelligence</h3>
-                            <p class="company">Carnegie Mellon University</p>
-                            <p class="department">School of Computer Science,</p>
-                            <p class="department">Language Technologies Institute</p>
-                            <p class="location">Pittsburgh, PA</p>
-                            <p class="date">2021 - 2023</p>
-                            <p class="company">coded algorithms from scratch</p>
+                        <div class="work-timeline">
+                            <div class="timeline-item">
+                                <span class="timeline-left">
+                                    <span class="timeline-role">Member of Technical Staff, Post-Training & Evals</span>
+                                    <span class="timeline-company">· Turing</span>
+                                </span>
+                                <span class="timeline-date">2026–Present</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-left">
+                                    <span class="timeline-role">Tech Lead, AI Research Scientist</span>
+                                    <span class="timeline-company">· Accenture</span>
+                                </span>
+                                <span class="timeline-date">2023–2026</span>
+                            </div>
+                            <div class="timeline-item timeline-edu">
+                                <span class="timeline-left">
+                                    <span class="timeline-role">M.S. in Artificial Intelligence</span>
+                                    <span class="timeline-company">· Carnegie Mellon University</span>
+                                </span>
+                                <span class="timeline-date">2021–2023</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-left">
+                                    <span class="timeline-role">Data Scientist</span>
+                                    <span class="timeline-company">· Nearpod</span>
+                                </span>
+                                <span class="timeline-date">2020–2021</span>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-left">
+                                    <span class="timeline-role">Data Scientist</span>
+                                    <span class="timeline-company">· IBM</span>
+                                </span>
+                                <span class="timeline-date">2017–2020</span>
+                            </div>
+                            <div class="timeline-item timeline-edu">
+                                <span class="timeline-left">
+                                    <span class="timeline-role">B.A. in Economics-Statistics & Linguistics</span>
+                                    <span class="timeline-company">· Columbia University</span>
+                                </span>
+                                <span class="timeline-date">2013–2017</span>
+                            </div>
+                            <div class="timeline-item timeline-edu">
+                                <span class="timeline-left">
+                                    <span class="timeline-role">High School Diploma</span>
+                                    <span class="timeline-company">· Korean Minjok Leadership Academy</span>
+                                </span>
+                                <span class="timeline-date">2010–2013</span>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <img src="logos/columbia-college-logo.png" alt="Columbia College Logo" class="company-logo">
-                        <div class="experience-title">
-                            <h3>B.A. in Economics-Statistics & Linguistics</h3>
-                            <p class="company">Columbia University</p>
-                            <p class="department">Columbia College</p>
-                            <p class="location">New York, NY</p>
-                            <p class="date">2013 - 2017</p>
-                            <p class="company">discussed the meaning of life through art</p>
+                    <div class="intro-photo">
+                        <div class="photo-wrapper">
+                        <img src="images/profile_photo.jpeg" alt="Su Park" class="profile-photo">
+                        <div class="photo-easter-egg">perpetually oscillating between an art ho and a tech bro</div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <img src="images/kmla.png" alt="Korean Minjok Leadership Academy Logo" class="company-logo">
-                        <div class="experience-title">
-                            <h3>"Korea in Heart, World in Mind"</h3>
-                            <p class="company">Korean Minjok Leadership Academy</p>
-                            <p class="location">Hoengseong, South Korea</p>
-                            <p class="date">2010 - 2013</p>
-                            <p class="company">earned a blackbelt and learned my own mediocrity</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience">
-            <h2>Work Experience</h2>
-            <div class="experience-container">
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <img src="logos/turing-logo.png" alt="Turing Logo" class="company-logo">
-                        <div class="experience-title">
-                            <h3>Member of Technical Staff, RL, Post-training, and Evals</h3>
-                            <p class="company">Turing</p>
-                            <p class="location">San Francisco, CA</p>
-                            <p class="date">February 2026 - Present</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <img src="logos/accenture-logo.png" alt="Accenture Logo" class="company-logo">
-                        <div class="experience-title">
-                            <h3>Tech Lead, AI Research Scientist</h3>
-                            <p class="company">Accenture</p>
-                            <p class="location">San Francisco, CA</p>
-                            <p class="date">Nov 2023 - Jan 2026</p>
-                        </div>
-                    </div>
-                    <ul class="experience-list">
-                        <li>Designed, trained, and deployed domain-specific LLMs and multi-agent systems, developing
-                            custom pre/post-training recipes and pipelines to enhance reasoning, alignment,
-                            function-calling, and RAG.</li>
-                        <li>Optimized large-scale model training and benchmarking workflows via data and model
-                            parallelism, cutting GPU allocation and manual efforts by 400%.</li>
-                        <li>"Harnessing Business and Media Insights with Large Language Models" (<a
-                                href="https://arxiv.org/abs/2406.06559" target="_blank" class="report-link">arXiv</a>),
-                            introducing FALM, the Fortune Magazine LLM built for business analytics.</li>
-                        <li>"SFT-GO: Supervised Fine-Tuning with Group Optimization for Large Language Models" (<a
-                                href="https://www.arxiv.org/abs/2506.15021" target="_blank"
-                                class="report-link">arXiv</a>), introducing a token importance-aware training approach,
-                            improving model accuracy and convergence efficiency across multiple datasets and base Llama
-                            models.</li>
-                        <li>"Small Language Models: Architecture, Evolution, and the Future of Artificial Intelligence"
-                            (<a href="https://www.preprints.org/manuscript/202601.0973" target="_blank"
-                                class="report-link">Preprint</a>), introducing a novel multi-axis taxonomy to classify
-                            models with under 15B parameters by architecture, genesis, and optimization goals while
-                            identifying key efficiency innovations.</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <img src="logos/nearpod-logo.png" alt="Nearpod Logo" class="company-logo">
-                        <div class="experience-title">
-                            <h3>Data Scientist</h3>
-                            <p class="company">Nearpod</p>
-                            <p class="location">Brooklyn, NY</p>
-                            <p class="date">January 2020 - April 2021</p>
-                        </div>
-                    </div>
-                    <ul class="experience-list">
-                        <li>First and only data science hire. Defined product metrics, built API pipelines, predictive
-                            models, and dashboards, working directly with C-Suite. Played a key role in $650M
-                            acquisition by Renaissance Learning.</li>
-                    </ul>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <img src="logos/ibm-logo.png" alt="IBM Logo" class="company-logo">
-                        <div class="experience-title">
-                            <h3>Data Scientist</h3>
-                            <p class="company">IBM</p>
-                            <p class="location">New York, NY</p>
-                            <p class="date">August 2017 - January 2020</p>
-                        </div>
-                    </div>
-                    <ul class="experience-list">
-                        <li>Led a 30-person team across marketing, product, and design. Launched 200+ personalization
-                            experiments, 30+ user interviews, and leveraged funnel-based A/B testing to drive 230%
-                            engagement growth and $10M in revenue gains for 13 AI products. Earned the 2019 Q1 CMO
-                            Award.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="research">
-            <h2>Research</h2>
-            <div class="experience-container">
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <img src="logos/cmu-logo.png" alt="CMU Logo" class="company-logo">
-                        <div class="experience-title">
-                            <h3>Multimodal Research Engineer</h3>
-                            <p class="company">Carnegie Mellon University, School of Computer Science,</p>
-                            <p class="company">Language Technologies Institute</p>
-                            <p class="location">Pittsburgh, PA</p>
-                            <p class="date">October 2021 - December 2022</p>
-                        </div>
-                    </div>
-                    <ul class="experience-list">
-                        <li>Temporal Action Localization: Implemented and achieved a 0.9 point AUC improvement over the
-                            BMN model on ActivityNet-1.3 (20K miscellaneous Youtube videos) using temporal shift, adding
-                            global information using Squeeze and Excite, and ensembling to correctly identify action
-                            timestamps (<a href="papers/temporal_action_localization.pdf" target="_blank"
-                                class="report-link">Report</a>)</li>
-                        <li>Multilingual Speech Recognition: Identified the optimal Byte Pair Encoding vocabulary size,
-                            incorporated language modeling, and employed self supervised representation learning with
-                            HuBERT and wav2vec 2.0 to train a variety of ASR models on African Accented French using
-                            ESPNet (<a href="papers/multilingual_speech.pdf" target="_blank"
-                                class="report-link">Report</a>)</li>
-                        <li>Model Probing: Built a model-agnostic end-to-end framework to determine whether upstream
-                            tasks (NER, PoS tagging, DP, and SRL) learned in pretrained encoders are actually utilized
-                            in downstream tasks. Created a unified data processing infrastructure that covers 14 CoLA
-                            datasets (<a href="papers/model_probing.pdf" target="_blank" class="report-link">Report</a>)
-                        </li>
-                        <li>Model Compression & Bias in LLMs: Applied pruning and quantization on BERT to assess the
-                            impact on the level of biases based on question context, class balance, and prediction
-                            confidence (<a href="papers/bias_compression.pdf" target="_blank"
-                                class="report-link">Report</a>)</li>
-                        <li>Machine Translation for Low Resource Languages: Built a transformer model with Fairseq to 1)
-                            augment the data with copied target side monolingual data 2) select a second transfer
-                            language based on LangRank which resulted in a 345 percent increase in BLEU over the given
-                            baseline for Bel-Eng and Aze-Eng (<a href="papers/multilingual_translation.pdf"
-                                target="_blank" class="report-link">Report</a>)</li>
-                        <li><a href="https://scholar.google.com/citations?user=sHt0-xoAAAAJ&hl=en&authuser=1"
-                                target="_blank" class="report-link">Google Scholar</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Driver/Restaurant Recommendation System</h3>
-                    <p>Developed an Uber-like Java program that matches real-time client requests to available cab
-                        drivers and targeted restaurant advertisements based on regression models by processing multiple
-                        streams of GPS, Apple Watch user health and biometric data, and Google Map & Yelp business data.
-                        Deployed Kafka and Samza on a YARN cluster provisioned on AWS.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">Kafka</span>
-                        <span class="tech-tag">Samza</span>
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">Multimodal</span>
-                        <span class="tech-tag">Recommendation</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Deep Learning Algorithms From Scratch</h3>
-                    <p>Implemented forward and backward methods for linear, 1D & 2D conv, RNN, dropout, batch norm,
-                        sigmoid, tanh, ReLU, softmax, hidden markov, matrix factorization, logistic regression, SVM,
-                        TF-IDF, Decision Tree, and neural network without relying on Pytorch or Scikit-Learn</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">NumPy</span>
-                        <span class="tech-tag">Deep Learning</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Twitter Analytics Web Service</h3>
-                    <p>Implemented ETL for QR code, Blockchain validation, and User Recommendation services on a Twitter
-                        dataset (~1TB) using AWS, Spark, and Kubernetes. Designed and optimized a MySQL DB schema for
-                        scale and throughput. Deployed web-servers (Sanic) in Python</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">Spark</span>
-                        <span class="tech-tag">Kubernetes</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">Recommendation</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>Heterogeneous Storage for Social Networking</h3>
-                    <p>Configured and deployed heterogeneous SQL and NoSQL databases (MySQL, MongoDB and Neo4j) in Java
-                        with a caching mechanism for a Facebook-like social networking web app</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">Neo4j</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <h3>..other side quests</h3>
-                    <p>an AI-based Codenames game, personalized rental listing search, and a personalized
-                        reflection assistant based on Korean traditions. I'll
-                        share more when we meet.</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">AI</span>
-                        <span class="tech-tag">Personalization</span>
-                        <span class="tech-tag">Search</span>
-                    </div>
-                    <a href="https://github.com/sunotsue" target="_blank" class="github-link-card" aria-label="GitHub">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                            <path
-                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg>
-                    </a>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="podcast-feature">
-            <div class="podcast-container">
-                <div class="podcast-content">
-                    <img src="images/pod-logo.png" alt="Talking Machines Podcast Logo" class="podcast-logo">
-                    <div class="podcast-text">
-                        <h2>Talking Machines</h2>
-                        <p>I host a podcast that unpacks the latest AI research and engineering methods in a way that's
-                            clear, friendly, and accessible (I automated the entire pipeline 🤫). </picture>
-                        </p>
-                        <div class="podcast-links">
-                            <a href="https://open.spotify.com/show/35IuQwu17BwEUC9h24Yn8l?si=5135ad257ecb4683"
-                                target="_blank" class="platform-button spotify">
-                                <span>Spotify</span>
+                        <div class="social-links">
+                            <a href="https://scholar.google.com/citations?user=sHt0-xoAAAAJ&hl=en" target="_blank"
+                                class="social-icon-link" title="Google Scholar">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
+                                </svg>
                             </a>
-                            <a href="https://podcasts.apple.com/us/podcast/talking-machines-by-su-park/id1805363038"
-                                target="_blank" class="platform-button apple">
-                                <span>Apple</span>
+                            <a href="https://x.com/sunotsue_" target="_blank" class="social-icon-link"
+                                title="X (Twitter)">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z" />
+                                </svg>
                             </a>
-                            <a href="https://www.youtube.com/@talkingmachinespod" target="_blank"
-                                class="platform-button youtube">
-                                <span>YouTube</span>
+                            <a href="https://github.com/sunotsue" target="_blank" class="social-icon-link"
+                                title="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/suminpark/" target="_blank" class="social-icon-link"
+                                title="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg>
+                            </a>
+                            <a href="https://wooju.xyz" target="_blank" class="social-icon-link" title="wooju.xyz">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z" />
+                                </svg>
                             </a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
 
-    <section id="reach-out">
-        <h2>Say Hi</h2>
-        <div class="reach-out-container">
-            <p class="chat-text">
-                <span class="line">💌 Full CV,</span>
-                <span class="line">coffee, or a</span>
-                <span class="line">15 minute chat</span>&nbsp;➜&nbsp;
-                <a href="mailto:suinthelab@gmail.com" class="social-link email-link">
-                    <span class="cheese-emoji">🧀</span>
-                    <span class="email-tooltip">suinthelab@gmail.com</span>
-                </a>
-            </p>
         </div>
-    </section>
+
+        <!-- TAB 2: Research -->
+        <div id="tab-research" class="tab-panel">
+
+            <section id="research-papers">
+                <h2>Research</h2>
+                <ul class="research-list">
+                    <li>
+                        <span class="research-title">SFT-GO: Supervised Fine-Tuning with Group Optimization for Large
+                            Language Models.</span>
+                        Developed a token importance-aware post-training method for improving training signal
+                        utilization in large language models. <a href="https://www.arxiv.org/abs/2506.15021"
+                            target="_blank" class="report-link">arXiv</a>, 2025.
+                    </li>
+                    <li>
+                        <span class="research-title">Small Language Models: Architecture, Evolution, and the Future of
+                            Artificial Intelligence.</span>
+                        Proposed a multi-axis taxonomy for classifying small language models and synthesized emerging
+                        approaches to capability-efficiency tradeoffs. <a
+                            href="https://www.preprints.org/manuscript/202601.0973" target="_blank"
+                            class="report-link">Preprint</a>, 2025.
+                    </li>
+                    <li>
+                        <span class="research-title">Harnessing Business and Media Insights with Large Language
+                            Models.</span>
+                        Pre- and post-trained a domain-specialized LLM for business intelligence and media analysis for
+                        Fortune Magazine. <a href="https://arxiv.org/abs/2406.06559" target="_blank"
+                            class="report-link">arXiv</a>, 2024.
+                    </li>
+                    <li>
+                        <span class="research-title">Model Probing and Capability Attribution.</span>
+                        Developed a probing framework for identifying which latent linguistic signals drive model
+                        predictions, enabling capability attribution, systematic error analysis, and instance-level
+                        failure diagnosis. <a href="papers/model_probing.pdf" target="_blank"
+                            class="report-link">Report</a>, 2022.
+                    </li>
+                    <li>
+                        <span class="research-title">Behavioral Effects of Model Compression.</span>
+                        Investigated how pruning and quantization alter learned representations and downstream model
+                        behavior, revealing compression-induced shifts in calibration, prediction dynamics, and output
+                        distributions across diverse task settings. <a href="papers/bias_compression.pdf" target="_blank"
+                            class="report-link">Report</a>, 2022.
+                    </li>
+                    <li>
+                        <span class="research-title">Low-Resource Machine Translation.</span>
+                        Combined target-side monolingual data augmentation with LangRank-guided transfer language
+                        selection, improving BLEU scores by up to 345% over baseline systems for Belarusian-English and
+                        Azerbaijani-English translation. <a href="papers/multilingual_translation.pdf" target="_blank"
+                            class="report-link">Report</a>, 2022.
+                    </li>
+                    <li>
+                        <span class="research-title">Low-Resource Multilingual ASR.</span>
+                        Investigated tokenization and self-supervised representation learning for low-resource speech
+                        recognition, evaluating HuBERT, wav2vec 2.0, language model integration, and Byte Pair Encoding
+                        vocabulary design in African-accented French. <a href="papers/multilingual_speech.pdf"
+                            target="_blank" class="report-link">Report</a>, 2022.
+                    </li>
+                    <li>
+                        <span class="research-title">Temporal Action Localization.</span>
+                        Investigated architectural approaches for long-range temporal reasoning in video understanding,
+                        developing extensions to Boundary-Matching Network that improved ActivityNet-1.3 localization
+                        performance by 0.9 AUC through temporal feature propagation and global context aggregation. <a
+                            href="papers/temporal_action_localization.pdf" target="_blank"
+                            class="report-link">Report</a>, 2021.
+                    </li>
+                </ul>
+                <p class="scholar-link"><a href="https://scholar.google.com/citations?user=sHt0-xoAAAAJ&hl=en"
+                        target="_blank" class="report-link">Google Scholar</a></p>
+            </section>
+
+        </div>
+
+        <!-- TAB 3: Projects -->
+        <div id="tab-projects" class="tab-panel">
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="project-grid">
+
+                    <div class="project-card">
+                        <h3>Driver/Restaurant Recommendation System</h3>
+                        <p>Developed an Uber-like Java program that matches real-time client requests to available cab
+                            drivers and targeted restaurant advertisements based on regression models by processing
+                            multiple streams of GPS, Apple Watch user health and biometric data, and Google Map & Yelp
+                            business data. Deployed Kafka and Samza on a YARN cluster provisioned on AWS.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Kafka</span>
+                            <span class="tech-tag">Samza</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Multimodal</span>
+                            <span class="tech-tag">Recommendation</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Deep Learning Algorithms From Scratch</h3>
+                        <p>Implemented forward and backward methods for linear, 1D & 2D conv, RNN, dropout, batch norm,
+                            sigmoid, tanh, ReLU, softmax, hidden markov, matrix factorization, logistic regression,
+                            SVM, TF-IDF, Decision Tree, and neural network without relying on Pytorch or Scikit-Learn
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NumPy</span>
+                            <span class="tech-tag">Deep Learning</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Twitter Analytics Web Service</h3>
+                        <p>Implemented ETL for QR code, Blockchain validation, and User Recommendation services on a
+                            Twitter dataset (~1TB) using AWS, Spark, and Kubernetes. Designed and optimized a MySQL DB
+                            schema for scale and throughput. Deployed web-servers (Sanic) in Python</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">Spark</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Recommendation</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Heterogeneous Storage for Social Networking</h3>
+                        <p>Configured and deployed heterogeneous SQL and NoSQL databases (MySQL, MongoDB and Neo4j) in
+                            Java with a caching mechanism for a Facebook-like social networking web app</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Neo4j</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>..other side quests</h3>
+                        <p>an AI-based Codenames game, personalized rental listing search, and a personalized
+                            reflection assistant based on Korean traditions. I'll share more when we meet.</p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">AI</span>
+                            <span class="tech-tag">Personalization</span>
+                            <span class="tech-tag">Search</span>
+                        </div>
+                    </div>
+
+                </div>
+                <p class="scholar-link"><a href="https://github.com/sunotsue" target="_blank" class="report-link">GitHub</a></p>
+            </section>
+
+        </div>
+
+        <!-- TAB 4: CV -->
+        <div id="tab-cv" class="tab-panel">
+
+            <section id="cv-viewer">
+                <div class="cv-actions">
+                    <a href="2026June_SuPark_CV.pdf" download="SuPark_CV.pdf" class="download-btn">Download CV</a>
+                </div>
+                <div class="pdf-embed">
+                    <iframe src="2026June_SuPark_CV.pdf" width="100%" height="960" title="Su Park CV"></iframe>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
 
     <footer>
         <p>&copy; 2026 Su Park. All rights reserved.</p>

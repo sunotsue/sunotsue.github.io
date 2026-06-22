@@ -1,510 +1,449 @@
-/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Nanum Myeongjo', serif;
 }
 
-/* Then, set it as the default font for the entire site */
 body {
     font-family: 'Nanum Myeongjo', serif;
     font-weight: 400;
-    line-height: 1.6;
-    color: #333;
+    line-height: 1.7;
+    color: #1a1a1a;
+    background: #fff;
     cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><text x='0' y='20' font-size='20'>🐭</text></svg>"), auto;
 }
 
+a, button, .project-card {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><text x='0' y='20' font-size='20'>🐁</text></svg>"), pointer;
+}
 
-/* Header styles */
+/* ── Header ── */
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1rem 2rem;
-    background-color: rgba(255, 255, 255, 0.95);
-    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid #e8e8e8;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-header.scrolled {
-    background-color: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+.header-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 54px;
 }
 
 .header-title {
-    font-size: 1.5rem;
-    color: #333;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #1a1a1a;
 }
 
-.github-link {
-    display: inline-flex;
-    align-items: center;
-    color: #333;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    opacity: 0.7;
-}
-
-.github-link:hover {
-    opacity: 1;
-    transform: translateY(-2px);
-}
-
-.github-link svg {
-    width: 20px;
-    height: 20px;
-}
-
-/* Main content */
-main {
-    margin-top: 70px;
-}
-
-section {
-    padding: 4rem 2rem;
-    min-height: auto;
+/* ── Tab nav ── */
+.tab-nav {
     display: flex;
-    flex-direction: column;
+    gap: 1.75rem;
 }
 
-/* Standardize section header spacing */
-section h2 {
-    margin-bottom: 2rem;
-    text-align: left;
-}
-
-/* Standardize spacing between sections */
-#podcast-feature,
-#education,
-#experience,
-#research,
-#projects,
-#consuming,
-#finished,
-#reach-out {
-    margin-top: 2rem;
-}
-
-/* Adjust container spacing */
-.experience-container,
-.project-grid,
-.consuming-grid,
-.podcast-container,
-.reach-out-container {
-    margin-top: 0;
-}
-
-@media (max-width: 768px) {
-    section {
-        padding: 3rem 1rem;
-    }
-
-    section h2 {
-        margin-bottom: 1.5rem;
-    }
-}
-
-/* Intro section */
-#intro {
-    background-color: white;
-}
-
-/* Experience section */
-.experience-container {
-    max-width: 800px;
-    margin: 2rem auto;
-}
-
-.experience-item {
-    margin-bottom: 2rem;
-    padding: 1.5rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.experience-item h3 {
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
-}
-
-.company {
-    color: #666;
-    font-weight: bold;
-}
-
-.date {
-    color: #888;
+.tab-btn {
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    font-family: 'Nanum Myeongjo', serif;
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    color: #aaa;
+    padding: 0.2rem 0;
+    letter-spacing: 0.02em;
+    transition: color 0.15s, border-color 0.15s;
 }
 
-.experience-list {
-    list-style-type: none;
-    padding-left: 0;
-    margin-top: 1rem;
+.tab-btn.active {
+    color: #1a1a1a;
+    border-bottom-color: #1a1a1a;
 }
 
-.experience-list li {
-    position: relative;
-    padding-left: 1.5rem;
+.tab-btn:hover {
+    color: #1a1a1a;
+}
+
+/* ── Tab panels ── */
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+/* ── Main ── */
+main {
+    max-width: 860px;
+    margin: 54px auto 0;
+    padding: 0 2rem;
+    overflow-x: hidden;
+}
+
+/* ── Sections ── */
+section {
+    padding: 3.5rem 0;
+    border-top: 1px solid #ebebeb;
+}
+
+.tab-panel section:first-child {
+    border-top: none;
+    padding-top: 3.5rem;
+}
+
+section h2 {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-bottom: 1.75rem;
+}
+
+/* ── Intro ── */
+.intro-container {
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    gap: 3.5rem;
+    align-items: start;
+}
+
+.intro-description {
+    max-width: 460px;
+}
+
+.intro-description p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #1a1a1a;
     margin-bottom: 0.75rem;
 }
 
-.experience-list li:before {
-    content: "-";
-    position: absolute;
-    left: 0;
-    color: #666;
+.intro-description p:first-child {
+    margin-bottom: 0.5rem;
 }
 
-.experience-list li:last-child {
+.intro-description p:last-of-type {
     margin-bottom: 0;
 }
 
-/* Projects section */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 2rem auto;
+.intro-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.project-card {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
+.profile-photo {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.photo-wrapper {
+    position: relative;
+    width: 100%;
+    line-height: 0;
+}
+
+.photo-easter-egg {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    color: #fff;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    pointer-events: none;
+}
+
+.photo-wrapper:hover .photo-easter-egg {
+    opacity: 1;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.9rem;
+}
+
+.social-icon-link {
+    color: #ccc;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.15s;
+}
+
+.social-icon-link:hover {
+    color: #1a1a1a;
+}
+
+/* ── Work timeline (about page) ── */
+.work-timeline {
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #ebebeb;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    font-size: 0.87rem;
+    line-height: 1.5;
+}
+
+.timeline-left {
+    display: flex;
+    align-items: baseline;
+    gap: 0.3rem;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
+.timeline-role {
+    font-weight: 700;
+    color: #1a1a1a;
+    white-space: nowrap;
+}
+
+.timeline-company {
+    color: #888;
+    white-space: nowrap;
+}
+
+.timeline-date {
+    color: #aaa;
+    font-size: 0.82rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.timeline-edu .timeline-role {
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.timeline-edu .timeline-company {
+    color: #888;
+}
+
+/* ── Work Experience ── */
+.experience-container {
     display: flex;
     flex-direction: column;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+.experience-item {
+    padding: 1.75rem 0;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-.project-card h3 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
+.experience-item:first-child {
+    padding-top: 0;
 }
 
-.project-card p {
-    margin-bottom: 1rem;
-    flex-grow: 1;
-}
-
-.tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: auto;
-}
-
-.tech-tag {
-    background-color: #f0f0f0;
-    padding: 0.25rem 0.75rem;
-    border-radius: 15px;
-    font-size: 0.85rem;
-    color: #666;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 2rem;
-    background-color: #f8f9fa;
-}
-
-/* Intro section styles */
-.intro-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
-    max-width: 900px;
-    margin: 0 auto;
-    justify-content: center;
-}
-
-.intro-photo {
-    text-align: center;
-}
-
-.profile-photo {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-    section {
-        padding: 3rem 1rem;
-    }
-
-    .project-grid {
-        grid-template-columns: 1fr;
-        padding: 0 1rem;
-    }
-
-    .header-title {
-        font-size: 1.2rem;
-    }
-
-    .github-link svg {
-        width: 18px;
-        height: 18px;
-    }
-
-    .intro-container {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .intro-photo {
-        order: -1; /* This moves the photo to the top on mobile */
-    }
-
-    .profile-photo {
-        max-width: 250px; /* Limit photo size on mobile */
-        margin: 0 auto 2rem;
-    }
-}
-
-.location {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 0.25rem;
+.experience-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
 .experience-header {
     display: flex;
     align-items: flex-start;
-    gap: 1.5rem;
-    margin-bottom: 1rem;
+    gap: 1.25rem;
+    margin-bottom: 0.75rem;
 }
 
 .company-logo {
-    width: 100px;
-    height: 100px;
+    width: 42px;
+    height: 42px;
     object-fit: contain;
-    padding: 10px;
+    flex-shrink: 0;
+    opacity: 0.8;
 }
 
-.experience-title {
-    flex: 1;
+.experience-title h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.15rem;
 }
 
-/* If needed, you can add specific adjustments for the Columbia logo */
-.experience-header img[alt="Columbia College Logo"] {
-    width: 110px;
-    height: 110px;
+.company {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #444;
 }
 
-/* Responsive design for mobile */
-@media (max-width: 768px) {
-    .experience-header {
-        flex-direction: row-reverse;
-        gap: 1rem;
-    }
-
-    .company-logo {
-        width: 45px; /* Slightly smaller on mobile */
-    }
+.location {
+    font-size: 0.82rem;
+    color: #aaa;
 }
 
+.date {
+    font-size: 0.82rem;
+    color: #aaa;
+}
+
+.experience-list {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+
+.experience-list li {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.7;
+    padding-left: 1.1rem;
+    position: relative;
+}
+
+.experience-list li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: #ccc;
+}
+
+/* ── Report links ── */
 .report-link {
-    color: #2c3e50;
+    color: #555;
     text-decoration: none;
-    font-weight: 500;
-    padding: 2px 6px;
-    border-radius: 4px;
-    background-color: #f0f0f0;
-    transition: all 0.2s ease;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%232c3e50' viewBox='0 0 16 16'%3E%3Cpath d='M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z'/%3E%3Cpath d='M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z'/%3E%3C/svg%3E");
-    background-position: right 4px center;
-    background-repeat: no-repeat;
-    padding-right: 20px;
+    border-bottom: 1px solid #ddd;
+    transition: color 0.15s, border-color 0.15s;
 }
 
 .report-link:hover {
-    background-color: #e0e0e0;
-    color: #1a252f;
-    transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    color: #1a1a1a;
+    border-bottom-color: #1a1a1a;
 }
 
-.report-link:active {
-    transform: translateY(0);
-    box-shadow: none;
-}
-
-#research {
-    background-color: #f8f9fa;
-}
-
-#research .experience-item {
-    background-color: white;  /* To ensure contrast with the section background */
-}
-
-/* For clickable elements, you might want to change the cursor to indicate interactivity */
-a, button, .project-card, .tech-tag {
-    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'><text x='0' y='20' font-size='20'>🐁</text></svg>"), pointer;
-}
-
-.department {
-    color: #666;
-    font-size: 0.9rem;
-    margin-bottom: 0.25rem;
-}
-
-#consuming {
-    background-color: #f8f9fa;
-}
-
-.consuming-grid {
+/* ── Projects ── */
+.project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 2rem auto;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.1rem;
 }
 
-.consuming-card {
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
-    text-decoration: none;
-    color: inherit;
+.project-card {
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    padding: 1.4rem;
     display: flex;
     flex-direction: column;
+    transition: border-color 0.15s;
 }
 
-.consuming-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+.project-card:hover {
+    border-color: #bbb;
 }
 
-.consuming-image {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
+.project-card h3 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.6rem;
 }
 
-.consuming-text {
-    padding: 1rem;
-    text-align: center;
-}
-
-.consuming-text h3 {
-    margin: 0;
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
-}
-
-.consuming-text p {
-    margin: 0;
+.project-card p {
+    font-size: 0.875rem;
     color: #666;
+    line-height: 1.65;
+    flex-grow: 1;
+    margin-bottom: 1rem;
 }
 
-@media (max-width: 768px) {
-    .consuming-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .consuming-image {
-        height: 200px;
-    }
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: auto;
 }
 
+.tech-tag {
+    font-size: 0.74rem;
+    color: #aaa;
+    border: 1px solid #e8e8e8;
+    border-radius: 20px;
+    padding: 0.1rem 0.55rem;
+}
+
+.github-link-card {
+    display: inline-flex;
+    align-items: center;
+    color: #ccc;
+    text-decoration: none;
+    margin-top: 0.875rem;
+    transition: color 0.15s;
+}
+
+.github-link-card:hover {
+    color: #1a1a1a;
+}
+
+/* ── Reach out ── */
 #reach-out {
-    padding: 4rem 2rem;
     text-align: center;
 }
 
 .reach-out-container {
-    max-width: 800px;
+    max-width: 500px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .chat-text {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    margin: 1rem 0;
-    text-align: center;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: #1a1a1a;
 }
 
 .chat-text .line {
     display: inline;
 }
 
-@media (max-width: 768px) {
-    .chat-text .line {
-        display: block;
-        text-align: center;
-    }
-    
-    .chat-text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.2rem;
-    }
-}
-
 .social-link {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 10px;
-    transition: transform 0.2s ease;
+    margin-left: 6px;
     position: relative;
 }
 
-.social-link:hover {
-    transform: translateY(-2px);
-}
-
-.social-icon {
-    width: 24px;
-    height: 24px;
-}
-
 .cheese-emoji {
-    font-size: 2.5rem;
+    font-size: 2rem;
     display: inline-block;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s;
 }
 
 .social-link:hover .cheese-emoji {
     transform: rotate(15deg);
 }
 
-/* Retro Y2K Email Link Styling */
 .email-link {
     position: relative;
     display: inline-block;
-}
-
-.email-link .cheese-emoji {
-    font-size: 2.5rem;
-    display: inline-block;
-    transition: all 0.3s ease;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-}
-
-.email-link:hover .cheese-emoji {
-    transform: scale(1.1) rotate(15deg);
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
-    animation: bounce 0.6s ease-in-out;
 }
 
 .email-tooltip {
@@ -512,31 +451,18 @@ a, button, .project-card, .tech-tag {
     bottom: 120%;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(135deg, #ff1493, #ff69b4, #ff1493);
-    background-size: 200% 200%;
+    background: linear-gradient(135deg, #ff1493, #ff69b4);
     color: white;
-    padding: 16px 20px;
-    border-radius: 25px;
-    font-size: 0.9rem;
+    padding: 10px 16px;
+    border-radius: 18px;
+    font-size: 0.82rem;
     font-weight: 600;
     white-space: nowrap;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    box-shadow: 0 8px 25px rgba(255, 20, 147, 0.4), 0 0 20px rgba(255, 255, 255, 0.3);
-    border: 3px solid rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(10px);
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(255, 20, 147, 0.25);
     z-index: 1000;
-    animation: gradient-shift 3s ease-in-out infinite;
-}
-
-@keyframes gradient-shift {
-    0%, 100% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
 }
 
 .email-tooltip::before {
@@ -545,290 +471,191 @@ a, button, .project-card, .tech-tag {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    border: 8px solid transparent;
+    border: 5px solid transparent;
     border-top-color: #ff69b4;
 }
 
 .email-link:hover .email-tooltip {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(-5px);
-    animation: tooltip-bounce 0.6s ease-out;
+    transform: translateX(-50%) translateY(-4px);
 }
 
-@keyframes tooltip-bounce {
-    0% {
-        transform: translateX(-50%) translateY(10px) scale(0.8);
-        opacity: 0;
-    }
-    50% {
-        transform: translateX(-50%) translateY(-8px) scale(1.05);
-    }
-    100% {
-        transform: translateX(-50%) translateY(-5px) scale(1);
-        opacity: 1;
-    }
-}
-
-/* Y2K Bounce Animation */
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: scale(1.1) rotate(-5deg);
-    }
-    40% {
-        transform: scale(1.2) rotate(-8deg);
-    }
-    60% {
-        transform: scale(1.15) rotate(-6deg);
-    }
-}
-
-
-
-.recruiter-note {
-    font-size: 1rem;
-    color: #333;
-    margin-top: 1rem;
-}
-
-#finished {
-    padding-top: 6rem;  /* Increase from 4rem to match other sections */
-    background-color: white;
-}
-
-.podcast-section {
-    margin-top: 1.5rem;
-}
-
-.podcast-link {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    text-decoration: none;
-    color: inherit;
-    transition: transform 0.2s ease;
-}
-
-.podcast-link:hover {
-    transform: translateY(-2px);
-}
-
-.podcast-logo {
-    width: 220px;  /* Increased from 200px */
-    height: 220px;  /* Increased from 200px */
-    border-radius: 12px;
-    object-fit: cover;
-}
-
-/* Make the media query more specific and add !important to override any other styles */
-@media only screen and (max-width: 768px) {
-    .podcast-container .podcast-content .podcast-logo {
-        width: 300px !important;
-        height: 300px !important;
-    }
-
-    .podcast-links {
-        display: flex;
-        justify-content: center;
-        gap: 0.8rem;  /* Slightly reduce gap on mobile */
-        width: 100%;  /* Ensure full width */
-    }
-
-    .platform-button {
-        /* Keep buttons from wrapping by making them more compact if needed */
-        padding: 0.6rem 1rem;  /* Slightly reduced horizontal padding */
-    }
-}
-
-#podcast-feature {
-    background-color: #f8f9fa; /* alternates correctly after projects (white) */
-    padding: 4rem 2rem;
-    min-height: auto;
-}
-
-.podcast-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.podcast-content {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    padding: 2.5rem;
-    background-color: transparent;
-    border: none;
-}
-
-.podcast-text {
-    flex: 1;
+/* ── Research tab — Education ── */
+.cv-list {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;  /* Keep text left-aligned */
 }
 
-.podcast-text h2 {
-    margin-bottom: 1rem;
-    color: #2c3e50;
+.cv-item {
+    padding: 1.1rem 0;
+    border-bottom: 1px solid #f0f0f0;
 }
 
-.podcast-text p {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    line-height: 1.6;
+.cv-item:first-child {
+    padding-top: 0;
 }
 
-.podcast-button {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color: #1DB954;  /* Spotify green */
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: all 0.2s ease;
+.cv-item:last-child {
+    border-bottom: none;
 }
 
-.podcast-button:hover {
-    background-color: #1ed760;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(29, 185, 84, 0.3);
-}
-
-@media (max-width: 768px) {
-    #podcast-feature {
-        padding: 3rem 1rem;
-    }
-
-    .podcast-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 1.5rem;
-        padding: 1.5rem;
-    }
-
-    .podcast-logo {
-        width: 150px;
-        height: 150px;
-    }
-}
-
-.podcast-links {
+.cv-row {
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    width: 100%;  /* Take full width of container */
-    justify-content: flex-start;  /* Align with the text */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
 }
 
-.platform-button {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.6rem 1.2rem;  /* Back to original padding */
-    text-decoration: none;
-    border-radius: 20px;  /* Back to original border-radius */
-    transition: all 0.2s ease;
+.cv-degree {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.2rem;
+}
+
+.cv-org {
     font-size: 0.85rem;
-    font-weight: 500;
+    color: #888;
 }
 
-.platform-button:hover {
-    transform: translateY(-2px);
+.cv-date {
+    font-size: 0.82rem;
+    color: #aaa;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding-top: 0.1rem;
 }
 
-.platform-button.spotify {
-    background-color: #1DB954;
-    color: white;
+/* ── Research tab — Papers ── */
+.research-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
 }
 
-.platform-button.spotify:hover {
-    background-color: #1ed760;
-    box-shadow: 0 4px 10px rgba(29, 185, 84, 0.3);
+.research-list li {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.75;
+    padding-left: 1.1rem;
+    position: relative;
 }
 
-.platform-button.apple {
-    background-color: #872EC4;  /* Updated to Apple Podcasts purple */
-    color: white;
+.research-list li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: #ccc;
 }
 
-.platform-button.apple:hover {
-    background-color: #9633d8;  /* Slightly lighter purple for hover */
-    box-shadow: 0 4px 10px rgba(135, 46, 196, 0.3);  /* Updated shadow color */
+.research-title {
+    font-weight: 700;
+    color: #1a1a1a;
 }
 
-.platform-button.youtube {
-    background-color: #FF0000;
-    color: white;
+.scholar-link {
+    margin-top: 1.5rem;
+    font-size: 0.88rem;
 }
 
-.platform-button.youtube:hover {
-    background-color: #ff1a1a;
-    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+/* ── CV tab ── */
+.cv-actions {
+    margin-bottom: 1.25rem;
 }
 
-/* Back to original mobile sizes */
-@media (max-width: 768px) {
-    .platform-button {
-        padding: 0.5rem 1rem;
-        font-size: 0.8rem;
-    }
-}
-
-#education {
-    background-color: #f8f9fa;
-}
-
-#experience {
-    padding-top: 6rem;  /* Increase from 4rem to match other sections */
-    background-color: white;
-}
-
-#projects {
-    padding-top: 6rem;  /* Increase from 4rem to match other sections */
-    background-color: white;
-}
-
-.github-link-card {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: #333;
+.download-btn {
+    display: inline-block;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 0.85rem;
+    color: #1a1a1a;
     text-decoration: none;
-    transition: all 0.2s ease;
-    margin-top: 1rem;
-    opacity: 0.7;
-    width: 32px;
-    height: 32px;
-    border-radius: 6px;
+    border: 1px solid #1a1a1a;
+    border-radius: 3px;
+    padding: 0.4rem 1.1rem;
+    transition: background 0.15s, color 0.15s;
 }
 
-.github-link-card:hover {
-    opacity: 1;
-    transform: translateY(-2px);
-    background-color: #f0f0f0;
+.download-btn:hover {
+    background: #1a1a1a;
+    color: #fff;
 }
 
-.github-link-card svg {
-    width: 24px;
-    height: 24px;
+.pdf-embed {
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
-@media only screen and (max-width: 768px) {
-    .podcast-text {
-        align-items: center;  /* Center everything on mobile */
-        text-align: center;
+.pdf-embed iframe {
+    display: block;
+    border: none;
+    width: 100%;
+    min-width: 0;
+}
+
+/* ── Footer ── */
+footer {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-top: 1px solid #ebebeb;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #ccc;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+    main {
+        padding: 0 1.25rem;
     }
 
-    .podcast-container .podcast-content .podcast-logo {
-        width: 300px !important;
-        height: 300px !important;
+    .header-inner {
+        padding: 0 1.25rem;
     }
 
-    .podcast-links {
-        justify-content: center;
-        gap: 0.8rem;
+    .intro-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
     }
 
-    .platform-button {
-        padding: 0.6rem 1rem;
+    .intro-photo {
+        order: -1;
     }
-} 
+
+    .profile-photo {
+        max-width: 200px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .timeline-role {
+        white-space: normal;
+    }
+
+    .timeline-company {
+        white-space: normal;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cv-row {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+
+    .pdf-embed iframe {
+        height: 600px;
+    }
+
+    .tab-nav {
+        gap: 1.25rem;
+    }
+}
