@@ -218,17 +218,16 @@ section h2 {
     gap: 0.3rem;
     flex-shrink: 1;
     min-width: 0;
+    flex-wrap: wrap;
 }
 
 .timeline-role {
     font-weight: 700;
     color: #1a1a1a;
-    white-space: nowrap;
 }
 
 .timeline-company {
     color: #888;
-    white-space: nowrap;
 }
 
 .timeline-date {
@@ -634,13 +633,6 @@ footer {
         display: block;
     }
 
-    .timeline-role {
-        white-space: normal;
-    }
-
-    .timeline-company {
-        white-space: normal;
-    }
 
     .project-grid {
         grid-template-columns: 1fr;
