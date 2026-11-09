@@ -441,52 +441,6 @@ section h2 {
     transform: translateX(-50%) translateY(-4px);
 }
 
-/* ── Research tab — Education ── */
-.cv-list {
-    display: flex;
-    flex-direction: column;
-}
-
-.cv-item {
-    padding: 1.1rem 0;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.cv-item:first-child {
-    padding-top: 0;
-}
-
-.cv-item:last-child {
-    border-bottom: none;
-}
-
-.cv-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 2rem;
-}
-
-.cv-degree {
-    font-size: 0.92rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 0.2rem;
-}
-
-.cv-org {
-    font-size: 0.85rem;
-    color: #888;
-}
-
-.cv-date {
-    font-size: 0.82rem;
-    color: #aaa;
-    white-space: nowrap;
-    flex-shrink: 0;
-    padding-top: 0.1rem;
-}
-
 /* ── Research tab — Papers ── */
 .research-list {
     list-style: none;
@@ -560,11 +514,6 @@ footer {
 
     .project-grid {
         grid-template-columns: 1fr;
-    }
-
-    .cv-row {
-        flex-direction: column;
-        gap: 0.2rem;
     }
 
     .tab-nav {
